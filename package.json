@@ -1,0 +1,14 @@
+{
+  "name": "morkullanskennel",
+  "version": "0.0.1",
+  "author": "Erik Dackebro",
+  "license": "The MIT License (MIT)",
+  "dependencies": {
+    "express": "^4.13.4",
+    "react": "^0.14.7",
+    "browserify-middleware": "^7.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

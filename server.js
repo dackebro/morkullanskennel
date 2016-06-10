@@ -6,25 +6,40 @@
  * @version 0.1
  */
 
-var http    = require('http');
-var fs      = require('fs');
-var server;
+var app         = require('express')();
+var http        = require('http');
+var fs          = require('fs');
+var browserify  = require('browserify-middleware');
+
+var server    = http.Server(app);
+var bpath     = './backend_resources/';
+var fpath     = '/frontend_resources/';
+var conn      = JSON.parse(fs.readFileSync(bpath + 'connection_settings.json'));
 
 
-var resources = './backend_resources/';
-var conn      = JSON.parse(fs.readFileSync(resources + 'connection_settings.json'));
 
-function log(input) {
-  console.log(input);
-}
+app.get('/', function(req, res) {
+  log('Processing        ' + req.url);
+  res.sendFile(__dirname + '/index.html');
+  log('Processed request ' + req.url + '\n');
+});
 
-function handle(req, res) {
-    res.end('Hit path ' + req.url);
-    log('Processed request ' + req.url);
-}
+//app.get('/js/bundle.js',browserify(__dirname + '/fpath_resources/js/main.jsx'));
 
-//Initiate the server
-server = http.createServer(handle);
+app.get('/js/bundle.js', function(req, res) {
+  log('Processing        ' + req.url);
+  res.sendFile(__dirname + fpath +  'js/main.jsx');
+  //res.send(browserify(__dirname + '/fpath_resources/js/main.jsx'));
+  log('Processed request ' + req.url + '\n');
+});
+
+app.get('/style/*.css', function(req, res) {
+  log('Processing        ' + req.url);
+  res.sendFile(__dirname + fpath + req.url);
+  log('Processed request ' + req.url + '\n');
+});
+
+
 
 /**
  * Start the server.
@@ -32,7 +47,7 @@ server = http.createServer(handle);
  * @param {server~onListenSuccess} callback Callback handling the success of server.listen
  */
 server.listen(conn.PORT, function() {
-  log('Server listening on: http://' + conn.url + ':' + conn.PORT);
+  log('Server listening on: http://' + conn.url + ':' + conn.PORT + '/');
 });
 
 
@@ -42,7 +57,13 @@ server.listen(conn.PORT, function() {
 
 
 
-
+/**
+ * So i don't have to write console.log each time
+ * @param input Data to log
+ */
+function log(input) {
+  console.log(input);
+}
 
 /**
  * Print on what adress and port we're listening
