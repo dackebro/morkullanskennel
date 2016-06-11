@@ -26,12 +26,14 @@ app.get('/', function(req, res) {
 
 //app.get('/js/bundle.js',browserify(__dirname + '/fpath_resources/js/main.jsx'));
 
-app.get('/js/bundle.js', function(req, res) {
-  log('Processing        ' + req.url);
-  res.sendFile(__dirname + fpath +  'js/main.jsx');
-  //res.send(browserify(__dirname + '/fpath_resources/js/main.jsx'));
-  log('Processed request ' + req.url + '\n');
-});
+// app.get('/js/bundle.js', function(req, res) {
+//   log('Processing        ' + req.url);
+//   res.sendFile(__dirname + fpath +  'js/main.jsx');
+//   //res.send(browserify(__dirname + '/fpath_resources/js/main.jsx'));
+//   log('Processed request ' + req.url + '\n');
+// });
+
+app.get('/js/bundle.js', browserify(__dirname + fpath +  'js/main.jsx'))
 
 app.get('/js/*', function(req, res) {
   log('Processing        ' + req.url);

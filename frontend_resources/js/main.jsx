@@ -1,5 +1,6 @@
+var Item = require('./item.jsx');
+
 var contpath = '/cont/';
-//var Item = require('/js/item.jsx');
 
 class Main extends React.Component {
   constructor(props) {
@@ -9,7 +10,6 @@ class Main extends React.Component {
   getCont(source) {
     var path = contpath + source;
     var res = getSync(path);
-    console.log(res);
     return JSON.parse(res);
   }
 
@@ -17,9 +17,11 @@ class Main extends React.Component {
     var source = 'template'; //TODO: should be a parameter somehow
     var cont = this.getCont(source); //currently the content of one item in .json
 
+    console.log(Item(cont));
+
     return (
       <div id="test">
-        
+        <Item props={cont} />
       </div>
     )
   }
