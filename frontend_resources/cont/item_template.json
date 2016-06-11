@@ -1,8 +1,8 @@
 {
-  "id": "itemHTMLid",
-  "title": "itemTitle",
-  "text": "The text body of the item.",
-  "imgs": [
+  "itemId": "itemHTMLid",
+  "itemTitle": "itemTitle",
+  "itemText": "The text body of the item.",
+  "itemImgs": [
     {"3": ["pic1", "pic2","pic3"]},
     {"5": ["pic10", "pic11", "pic12", "pic13", "pic14"]}
   ]

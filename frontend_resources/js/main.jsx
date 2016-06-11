@@ -17,11 +17,9 @@ class Main extends React.Component {
     var source = 'template'; //TODO: should be a parameter somehow
     var cont = this.getCont(source); //currently the content of one item in .json
 
-    console.log(Item(cont));
-
     return (
       <div id="test">
-        <Item props={cont} />
+        <Item cont={cont} />
       </div>
     )
   }
