@@ -19,39 +19,26 @@ var conn      = JSON.parse(fs.readFileSync(bpath + 'connection_settings.json'));
 
 
 app.get('/', function(req, res) {
-  log('Processing        ' + req.url);
   res.sendFile(__dirname + '/index.html');
-  log('Processed request ' + req.url + '\n');
+  log('');
+  log('Processed ' + req.url);
 });
 
-//app.get('/js/bundle.js',browserify(__dirname + '/fpath_resources/js/main.jsx'));
-
-// app.get('/js/bundle.js', function(req, res) {
-//   log('Processing        ' + req.url);
-//   res.sendFile(__dirname + fpath +  'js/main.jsx');
-//   //res.send(browserify(__dirname + '/fpath_resources/js/main.jsx'));
-//   log('Processed request ' + req.url + '\n');
-// });
-
-app.get('/js/bundle.js', browserify(__dirname + fpath +  'js/main.jsx'))
+app.get('/js/bundle.js', browserify(__dirname + fpath +  'js/main.jsx'));
 
 app.get('/js/*', function(req, res) {
-  log('Processing        ' + req.url);
   res.sendFile(__dirname + fpath +  req.url);
-  log('Processed request ' + req.url + '\n');
+  log('Processed ' + req.url);
 })
 
 app.get('/style/*.css', function(req, res) {
-  log('Processing        ' + req.url);
   res.sendFile(__dirname + fpath + req.url);
-  log('Processed request ' + req.url + '\n');
+  log('Processed ' + req.url);
 });
 
 app.get('/cont/*', function(req, res) {
-  log('Processing        ' + req.url);
   res.sendFile(__dirname + fpath + 'cont/item_template.json');
-  log('Processed request ' + req.url);
-  log('Sent data:\n' + fs.readFileSync(__dirname + fpath + 'cont/item_template.json') + '\n');
+  log('Processed ' + req.url);
 });
 
 
@@ -64,13 +51,6 @@ app.get('/cont/*', function(req, res) {
 server.listen(conn.PORT, function() {
   log('Server listening on: http://' + conn.url + ':' + conn.PORT + '/');
 });
-
-
-
-
-
-
-
 
 /**
  * So i don't have to write console.log each time
