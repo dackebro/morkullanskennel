@@ -1,2 +1,16 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
 @import 'topbar.css';
+
+body {
+  background-color: #3159e1;
+}
+
+#container {
+  width: 930px;
+  background-color: #e4e4e4;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  min-height: 100vh;
+}

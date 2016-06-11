@@ -33,10 +33,23 @@ app.get('/js/bundle.js', function(req, res) {
   log('Processed request ' + req.url + '\n');
 });
 
+app.get('/js/*', function(req, res) {
+  log('Processing        ' + req.url);
+  res.sendFile(__dirname + fpath +  req.url);
+  log('Processed request ' + req.url + '\n');
+})
+
 app.get('/style/*.css', function(req, res) {
   log('Processing        ' + req.url);
   res.sendFile(__dirname + fpath + req.url);
   log('Processed request ' + req.url + '\n');
+});
+
+app.get('/cont/*', function(req, res) {
+  log('Processing        ' + req.url);
+  res.sendFile(__dirname + fpath + 'cont/item_template.json');
+  log('Processed request ' + req.url);
+  log('Sent data:\n' + fs.readFileSync(__dirname + fpath + 'cont/item_template.json') + '\n');
 });
 
 
