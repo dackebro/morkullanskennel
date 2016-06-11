@@ -18,7 +18,7 @@ class Main extends React.Component {
     var cont = this.getCont(source); //currently the content of one item in .json
 
     return (
-      <div id="test">
+      <div id="itemContainer">
         <Item cont={cont} />
       </div>
     )

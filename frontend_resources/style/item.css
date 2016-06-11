@@ -1,0 +1,33 @@
+.item {
+  border: 2px solid #e0e0e0;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 3px 4px 3px #808080;
+  padding: 10px;
+}
+
+.item h1 {
+  display: block;
+  font-size: 36px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #1f1f1f;
+  text-align: left;
+  padding-top: 6px;
+}
+
+.item hr {
+  display: block;
+  margin: 5px auto 10px auto;
+  border-style: inset;
+  border: 1px solid #d9d9d9;
+}
+
+.item .itemText {
+  display: block;
+  padding: 6px 0 6px 0;
+}
+
