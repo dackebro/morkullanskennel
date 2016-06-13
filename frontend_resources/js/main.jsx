@@ -7,12 +7,16 @@ class Main extends React.Component {
   }
 
   render() {
-    var source = 'template'; //TODO: should be a parameter somehow
-    var cont = t.getCont(source); //currently the content of one item in .json
+    var path = '/template'; //TODO: should be a parameter somehow
+    var siteCont = t.getSiteCont(path); //an array of all items under current url
 
     return (
-      <div id="itemContainer">
-        <Item cont={cont} />
+      <div>
+        {siteCont.map(cont => 
+          (<div id="itemContainer">
+            <Item cont={cont} />
+          </div>)        
+        )}
       </div>
     )
   }

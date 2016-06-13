@@ -1,0 +1,12 @@
+{
+	"template": [
+    "templateItem1",
+    "templateItem2",
+    "templateItem3"
+  ],
+  "template2": [
+    "templateItem1",
+    "templateItem2",
+    "templateItem3"
+  ]
+}

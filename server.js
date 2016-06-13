@@ -36,7 +36,12 @@ app.get('/style/*.css', function(req, res) {
   log('Processed ' + req.url);
 });
 
-app.get('/cont/*', function(req, res) {
+app.get('/cont/items', function(req, res) {
+  res.sendFile(__dirname + fpath + 'cont/itemCollection.json');
+  log('Processed ' + req.url);
+});
+
+app.get('/cont/*/*', function(req, res) {
   res.sendFile(__dirname + fpath + 'cont/item_template.json');
   log('Processed ' + req.url);
 });
