@@ -1,5 +1,6 @@
-var Item = require('./item.jsx');
-var t = require('./tools.js');
+var Item =      require('./item.jsx');
+var ImgItem =   require('./imgitem.jsx');
+var t =         require('./tools.js');
 
 class Main extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Main extends React.Component {
         {siteCont.map(cont => 
           (<div id="itemContainer">
             <Item cont={cont} />
-          </div>)        
+          </div>)
         )}
       </div>
     )

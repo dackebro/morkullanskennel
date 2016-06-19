@@ -10,7 +10,13 @@
                 "A text body paragraph of the item. This is the bottom item."
               ],
   "itemImgs": [
-    {"3": ["pic1", "pic2","pic3"]},
-    {"5": ["pic10", "pic11", "pic12", "pic13", "pic14"]}
+    {
+      "imgCount": 3,
+      "imgs": ["pic1", "pic2", "pic3"]
+    },
+    {
+      "imgCount": 5,
+      "imgs": ["pic10", "pic11", "pic12", "pic13", "pic14"]
+    }
   ]
 }
