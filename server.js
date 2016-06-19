@@ -46,6 +46,26 @@ app.get('/cont/*/*', function(req, res) {
   log('Processed ' + req.url);
 });
 
+app.get('/imgs/*/1*', function(req, res) {
+  res.sendFile(__dirname + fpath + 'imgs/1imgdummy.png');
+  log('Processed ' + req.url);
+});
+
+app.get('/imgs/*/2*', function(req, res) {
+  res.sendFile(__dirname + fpath + 'imgs/2imgdummy.png');
+  log('Processed ' + req.url);
+});
+
+app.get('/imgs/*/3*', function(req, res) {
+  res.sendFile(__dirname + fpath + 'imgs/3imgdummy.png');
+  log('Processed ' + req.url);
+});
+
+app.get('/imgs/*/5*', function(req, res) {
+  res.sendFile(__dirname + fpath + 'imgs/5imgdummy.png');
+  log('Processed ' + req.url);
+});
+
 
 
 /**

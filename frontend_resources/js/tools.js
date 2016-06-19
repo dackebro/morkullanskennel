@@ -31,17 +31,8 @@ function getSiteCont(path) {
   }
 
   var items = itemsURL.map(item => getJSON(path + '/' + item));
-  log(items);
 
   return items;
-}
-
-/**
- * So i don't have to write console.log each time
- * @param input Data to log
- */
-function log(input) {
-  console.log(input);
 }
 
 module.exports = {

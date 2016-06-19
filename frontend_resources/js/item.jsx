@@ -1,15 +1,25 @@
+var ImgItem =   require('./imgitem.jsx');
+
 function Item(props) {
-  var {cont} = props;
 
   return (
-    <div id={cont.itemId} className="item">
-      <h1>{cont.itemTitle}</h1>
+    <div id={props.cont.itemId} className="item">
+      <h1>{props.cont.itemTitle}</h1>
       <hr></hr>
       {
-        cont.itemText.map(elem => (
+        props.cont.itemText.map(elem => (
             <span className="itemText">
               {elem}
             </span>
+        ))
+      }
+      {
+        props.cont.itemImgs.map(imgCont => (
+          <div>
+            <hr></hr>
+            <ImgItem  imgCont={imgCont} 
+                      path={props.path}/>
+          </div>
         ))
       }
     </div>

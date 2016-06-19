@@ -1,5 +1,4 @@
 var Item =      require('./item.jsx');
-var ImgItem =   require('./imgitem.jsx');
 var t =         require('./tools.js');
 
 class Main extends React.Component {
@@ -13,11 +12,14 @@ class Main extends React.Component {
 
     return (
       <div>
-        {siteCont.map(cont => 
-          (<div id="itemContainer">
-            <Item cont={cont} />
-          </div>)
-        )}
+        {
+          siteCont.map(cont => (
+            <div id="itemContainer">
+              <Item cont={cont}
+                    path={path} />
+            </div>
+          ))
+        }
       </div>
     )
   }
