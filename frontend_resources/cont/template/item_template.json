@@ -12,19 +12,19 @@
   "itemImgs": [
     {
       "imgCount": 1,
-      "imgs": ["1imgdummy0"]
+      "imgs": ["1imgdummy"]
     },
     {
       "imgCount": 2,
-      "imgs": ["2imgdummy0", "2imgdummy1"]
+      "imgs": ["2imgdummy", "2imgdummy"]
     },
     {
       "imgCount": 3,
-      "imgs": ["3imgdummy0", "3imgdummy1", "3imgdummy2"]
+      "imgs": ["3imgdummy", "3imgdummy", "3imgdummy"]
     },
     {
       "imgCount": 5,
-      "imgs": ["5imgdummy0", "5imgdummy1", "5imgdummy2", "5imgdummy3", "5imgdummy4"]
+      "imgs": ["5imgdummy", "5imgdummy", "5imgdummy", "5imgdummy", "5imgdummy"]
     }
   ]
 }

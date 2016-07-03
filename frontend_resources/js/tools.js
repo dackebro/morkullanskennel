@@ -1,5 +1,4 @@
 const contpath = '/cont';
-const itemCollectionPath = '/items';
 
 
 function getJSON(path) {
@@ -22,12 +21,13 @@ function getSync(path) {
 
 function getSiteCont(path) {
   var purePath = path.substring(1);
-  var siteCollection = getJSON(itemCollectionPath);
+  console.log(contpath + path + '/' + 'itemCollection.json');
+  var siteCollection = getJSON(path + '/' + 'itemCollection.json');
   var itemsURL = siteCollection[purePath];
 
   if (itemsURL == undefined) {
     //TODO: return could not find requested url page
-    log('Could not find requested url');
+    console.log('Could not find requested url');
   }
 
   var items = itemsURL.map(item => getJSON(path + '/' + item));
