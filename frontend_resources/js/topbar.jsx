@@ -10,12 +10,12 @@ class Topbar extends React.Component {
     var {pages} = t.getJSON('/pages.json');
 
     return (
-      <div>
+      <div className="topbarContainer">
         {
           pages.map(page => (
-            <span className="topbarItem">
-              <a href={page.href}>{page.displayName}</a>
-            </span>
+            <a href={page.href} className="topbarItem">
+              {page.displayName}
+            </a>
           ))
         }
       </div>

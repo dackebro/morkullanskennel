@@ -1,7 +1,11 @@
 @import 'imgs.css';
 
+.itemContainer {
+  margin: 10px 0 10px 0;
+}
+
 .item {
-  border: 2px solid #e0e0e0;
+  border: 2px solid #3159e1;
   background-color: #f4f4f4;
   border-radius: 4px;
   box-shadow: 3px 4px 3px #808080;

@@ -15,7 +15,7 @@ class Main extends React.Component {
       <div>
         {
           siteCont.map(cont => (
-            <div id="itemContainer">
+            <div className="itemContainer">
               <Item cont={cont}
                     path={path} />
             </div>

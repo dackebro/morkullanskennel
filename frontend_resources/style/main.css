@@ -8,11 +8,11 @@ body {
 
 #container {
   width: 932px;
-  background-color: #3159e1;
+  background-color: #e3e3f0;
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 40px;
+  padding-top: 52px;
   padding-bottom: 15px;
   min-height: 100vh;
 }
