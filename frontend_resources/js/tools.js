@@ -1,6 +1,5 @@
 const contpath = '/cont';
 
-
 function getJSON(path) {
   var res = getSync(contpath + path);
   return JSON.parse(res);
@@ -21,7 +20,6 @@ function getSync(path) {
 
 function getSiteCont(path) {
   var purePath = path.substring(1);
-  console.log(contpath + path + '/' + 'itemCollection.json');
   var siteCollection = getJSON(path + '/' + 'itemCollection.json');
   var itemsURL = siteCollection[purePath];
 
@@ -36,7 +34,8 @@ function getSiteCont(path) {
 }
 
 module.exports = {
-  getSiteCont
+  getSiteCont,
+  getJSON
 }
 
 

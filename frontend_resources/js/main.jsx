@@ -1,4 +1,5 @@
 var Item =      require('./item.jsx');
+var Topbar =    require('./topbar.jsx');
 var t =         require('./tools.js');
 
 class Main extends React.Component {

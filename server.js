@@ -36,6 +36,11 @@ app.get('/style/*.css', function(req, res) {
   log('Processed ' + req.url);
 });
 
+app.get('/cont/pages.json', function(req, res) {;
+  res.sendFile(__dirname + fpath + req.url);
+  log('Processed ' + req.url);
+});
+
 app.get('/cont/*/itemCollection.json', function(req, res) {
   res.sendFile(__dirname + fpath + req.url);
   log('Processed ' + req.url);
