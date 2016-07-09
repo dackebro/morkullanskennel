@@ -27,7 +27,7 @@
 
 .item hr {
   display: block;
-  margin: 5px auto 10px auto;
+  margin: 5px auto 5px auto;
   border-style: inset;
   border: 1px solid #d9d9d9;
 }
@@ -36,4 +36,5 @@
   display: block;
   padding: 6px 0 6px 0;
 }
+
 

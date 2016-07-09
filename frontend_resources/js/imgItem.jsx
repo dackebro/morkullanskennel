@@ -6,58 +6,32 @@ function ImgItem(props) {
 
   return (
     <div className="imgContainer">
-      {thumb5imgs(imgCount, imgs, path)}
-      {thumb3imgs(imgCount, imgs, path)}
-      {thumb2imgs(imgCount, imgs, path)}
-      {thumb1imgs(imgCount, imgs, path)}
+      {imgs.map((img, index) => (
+        <span className={imgThumbClasses(imgCount, index)}>
+          <a href={'/imgs' + path + '/' + img + '.png'}>
+            <img src={'/imgs' + path + '/' + img + 'Thumb.png'}/>
+          </a>
+        </span>
+      ))}
     </div>
   );
 }
 
-function thumb5imgs(imgCount, imgs, path) {
-  if (imgCount == 5) {
-    return (imgs.map((img, index) => (
-      <span className={"thumb5imgs" +
-        (index == 0 ? " thumb5imgsleft" : (index == 4 ? " thumb5imgsright" : ""))
-      }>
-        <img src={'/imgs' + path + '/' + img + '.png'}/>
-      </span>
-    )))
-  }
-}
+function imgThumbClasses(imgCount, index) {
+  var thumbName = "thumb" + imgCount + "imgs";
+  var left = " " + thumbName + "left";
+  var right = " " + thumbName + "right";
+  var add = "";
 
-function thumb3imgs(imgCount, imgs, path) {
-  if (imgCount == 3) {
-    return (imgs.map((img, index) => (
-      <span className={"thumb3imgs" +
-        (index == 0 ? " thumb3imgsleft" : (index == 2 ? " thumb2imgsright" : ""))
-      }>
-        <img src={'/imgs' + path + '/' + img + '.png'}/>
-      </span>
-    )))
-  }
-}
-
-function thumb2imgs(imgCount, imgs, path) {
-  if (imgCount == 2) {
-    return (imgs.map((img, index) => (
-      <span className={"thumb2imgs" +
-        (index == 0 ? " thumb2imgsleft" : (index == 1 ? " thumb2imgsright" : ""))
-      }>
-        <img src={'/imgs' + path + '/' + img + '.png'}/>
-      </span>
-    )))
-  }
-}
-
-function thumb1imgs(imgCount, imgs, path) {
   if (imgCount == 1) {
-    return (imgs.map((img, index) => (
-      <span className={"thumb1imgs"}>
-        <img src={'/imgs' + path + '/' + img + '.png'}/>
-      </span>
-    )))
+
+  } else if (index == 0) {
+    add = left;
+  } else if (index == imgCount - 1) {
+    add = right;
   }
+
+  return "imgThumb " + thumbName + add;
 }
 
 module.exports = ImgItem;
