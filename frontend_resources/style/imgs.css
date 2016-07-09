@@ -12,21 +12,21 @@
 
 
 .thumb1imgs {
+
+}
+
+.thumb1imgsRescale {
+  display: inline-block;
+  width: 100%;
   height: auto;
-  width: auto;
-  max-width: 828px;
-  max-height: 621px;
+  max-width: 830px;
+  max-height: 623px;
 }
 
 
 
 
 .thumb2imgs {
-  height: auto;
-  width: auto;
-  max-width: 408px;
-  max-height: 306px;
-
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -39,15 +39,18 @@
   padding-right: 0px !important;
 }
 
+.thumb2imgsRescale {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 410px;
+  max-height: 308px;
+}
+
 
 
 
 .thumb3imgs {
-  height: auto;
-  width: auto;
-  max-width: 268px;
-  max-height: 201px;
-
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -60,27 +63,36 @@
   padding-right: 0px !important;
 }
 
+.thumb3imgsRescale {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 270px;
+  max-height: 203px;
+}
+
 
 
 
 .thumb5imgs {
-  height: auto;
-  width: auto;
-  max-width: 156px;
-  max-height: 117px;
-
-  padding-right: 5px;
-  padding-left: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .thumb5imgsleft {
-  padding-left: 0px !important;
-
+  margin-left: 0px !important;
 }
 
 .thumb5imgsright {
-  padding-right: 0px !important;
+  margin-right: 0px !important;
+}
 
+.thumb5imgsRescale {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 158px;
+  max-height: 119px;
 }
 
 /*  5: 50 spacing;

@@ -20,7 +20,7 @@
     },
     {
       "imgCount": 3,
-      "imgs": ["3imgdummy", "3imgdummy", "3imgdummy"]
+      "imgs": ["NO_IMAGE", "3imgdummy", "NO_IMAGE"]
     },
     {
       "imgCount": 5,

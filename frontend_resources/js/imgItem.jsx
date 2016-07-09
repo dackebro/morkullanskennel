@@ -2,15 +2,20 @@ function ImgItem(props) {
   var imgCount = props.imgCont.imgCount;
   var imgs = props.imgCont.imgs;
   var path = props.path;
-  var imgindex;
 
   return (
     <div className="imgContainer">
       {imgs.map((img, index) => (
         <span className={imgThumbClasses(imgCount, index)}>
-          <a href={'/imgs' + path + '/' + img + '.png'}>
-            <img src={'/imgs' + path + '/' + img + 'Thumb.png'}/>
-          </a>
+          {img === "NO_IMAGE" ?
+            (<span className={"thumb" + imgCount + "imgsRescale"}></span>)
+          :
+            (<a href={'/imgs' + path + '/' + img + '.png'}>
+              <img src={'/imgs' + path + '/' + img + 'Thumb.png'}
+                  className={"thumb" + imgCount + "imgsRescale"}
+              />
+            </a>)
+          }
         </span>
       ))}
     </div>
