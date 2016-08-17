@@ -4,19 +4,22 @@ function ImgItem(props) {
   var path = props.path;
 
   return (
-    <div className="imgContainer">
-      {imgs.map((img, index) => (
-        <span className={imgThumbClasses(imgCount, index)}>
-          {img === "NO_IMAGE" ?
-            (<span className={"thumb" + imgCount + "imgsRescale"}></span>)
-          :
-            (<a href={'/imgs' + path + '/' + img + '.png'}>
+    <div className="imgItemContainer">
+      {imgs.map(({img,desc}, index) => (
+        img === "NO_IMAGE" ? (
+          <div className={imgThumbClasses(imgCount, index)}>
+            <span className={"thumb" + imgCount + "imgsRescale"}></span>
+          </div>
+        ) : (
+          <div className={imgThumbClasses(imgCount, index)}>
+            <a href={'/imgs' + path + '/' + img + '.png'}>
               <img src={'/imgs' + path + '/' + img + 'Thumb.png'}
-                  className={"thumb" + imgCount + "imgsRescale"}
+                  className={"imgThumb " + "thumb" + imgCount + "imgsRescale"}
               />
-            </a>)
-          }
-        </span>
+            </a>
+            <div className="thumbDesc">{desc}</div>
+          </div>
+        )
       ))}
     </div>
   );
@@ -36,7 +39,7 @@ function imgThumbClasses(imgCount, index) {
     add = right;
   }
 
-  return "imgThumb " + thumbName + add;
+  return thumbName + add;
 }
 
 module.exports = ImgItem;

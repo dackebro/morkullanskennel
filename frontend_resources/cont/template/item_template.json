@@ -12,19 +12,34 @@
   "itemImgs": [
     {
       "imgCount": 1,
-      "imgs": ["1imgdummy"]
+      "imgs": [
+        {"img": "1imgdummy", "desc": "Caption for 1 img dummy"}
+      ]
     },
     {
       "imgCount": 2,
-      "imgs": ["2imgdummy", "2imgdummy"]
+      "imgs": [
+        {"img": "2imgdummy", "desc": "Caption for 2 img dummy"},
+        {"img": "2imgdummy", "desc": "Caption for 2 img dummy"}
+      ]
     },
     {
       "imgCount": 3,
-      "imgs": ["NO_IMAGE", "3imgdummy", "NO_IMAGE"]
+      "imgs": [
+        {"img": "NO_IMAGE", "desc": "Caption for 3 img dummy"},
+        {"img": "3imgdummy", "desc": "Caption for 3 img dummy"},
+        {"img": "NO_IMAGE", "desc": "Caption for 3 img dummy"}
+      ]
     },
     {
       "imgCount": 5,
-      "imgs": ["5imgdummy", "5imgdummy", "5imgdummy", "5imgdummy", "5imgdummy"]
+      "imgs": [
+        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
+        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
+        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
+        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
+        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"}
+      ]
     }
   ]
 }

@@ -1,11 +1,19 @@
-.imgThumb img {
+.imgThumb {
   display: inline-block;
   border: 1px solid #f4f4f4;
 }
 
-.imgThumb:hover img {
+.imgThumb:hover {
   display: inline-block;
   border: 1px solid black;
+}
+
+.thumbDesc {
+  text-align: center;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 5px 0 5px;
 }
 
 
@@ -27,16 +35,19 @@
 
 
 .thumb2imgs {
-  padding-right: 5px;
-  padding-left: 5px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 410px;
+  max-width: 410px;
 }
 
 .thumb2imgsleft {
-  padding-left: 0px !important;
+  margin-left: 0px !important;
 }
 
 .thumb2imgsright {
-  padding-right: 0px !important;
+  margin-right: 0px !important;
 }
 
 .thumb2imgsRescale {
@@ -51,16 +62,19 @@
 
 
 .thumb3imgs {
-  padding-right: 5px;
-  padding-left: 5px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 270px;
+  max-width: 270px;
 }
 
 .thumb3imgsleft {
-  padding-left: 0px !important;
+  margin-left: 0px !important;
 }
 
 .thumb3imgsright {
-  padding-right: 0px !important;
+  margin-right: 0px !important;
 }
 
 .thumb3imgsRescale {
@@ -75,8 +89,11 @@
 
 
 .thumb5imgs {
+  display: inline-block;
   margin-right: 5px;
   margin-left: 5px;
+  width: 158px;
+  max-width: 158px;
 }
 
 .thumb5imgsleft {
