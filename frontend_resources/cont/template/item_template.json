@@ -2,12 +2,12 @@
   "itemId": "itemHTMLid",
   "itemTitle": "itemTitle",
   "itemText": [
-                "A text body paragraph of the item. This is the topmost item.",
+                "A text body paragraph of the item. <b>This is the topmost item.</b>",
                 "A text body paragraph of the item. This is the 2nd item.",
                 "A text body paragraph of the item. This is the 3rd item.",
                 "A text body paragraph of the item. This is the 4th item.",
                 "A text body paragraph of the item. This is the 5th item.",
-                "A text body paragraph of the item. This is the bottom item."
+                "A text body paragraph of the item. <i>This is the bottom item.</i>"
               ],
   "itemImgs": [
     {
@@ -20,7 +20,7 @@
       "imgCount": 2,
       "imgs": [
         {"img": "2imgdummy", "desc": "Caption for 2 img dummy"},
-        {"img": "2imgdummy", "desc": "Caption for 2 img dummy"}
+        {"img": "2imgdummycopy", "desc": "Caption for 2 img dummy"}
       ]
     },
     {
@@ -35,10 +35,10 @@
       "imgCount": 5,
       "imgs": [
         {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
+        {"img": "1imgdummy", "desc": "Caption for 5 img dummy"},
         {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
         {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
-        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"},
-        {"img": "5imgdummy", "desc": "Caption for 5 img dummy"}
+        {"img": "2imgdummycopy", "desc": "Caption for 5 img dummy"}
       ]
     }
   ]

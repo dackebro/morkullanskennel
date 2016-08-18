@@ -12,11 +12,13 @@ function ImgItem(props) {
           </div>
         ) : (
           <div className={imgThumbClasses(imgCount, index)}>
-            <a href={'/imgs' + path + '/' + img + '.png'}>
-              <img src={'/imgs' + path + '/' + img + 'Thumb.png'}
-                  className={"imgThumb " + "thumb" + imgCount + "imgsRescale"}
-              />
-            </a>
+            <div className="imgCenterOuter">
+              <a href={'/imgs' + path + '/' + img + '.png'}>
+                <img src={'/imgs' + path + '/' + img + 'Thumb.png'}
+                    className={"imgThumb " + "thumb" + imgCount + "imgsRescale"}
+                />
+              </a>
+            </div>
             <div className="thumbDesc">{desc}</div>
           </div>
         )
@@ -27,8 +29,8 @@ function ImgItem(props) {
 
 function imgThumbClasses(imgCount, index) {
   var thumbName = "thumb" + imgCount + "imgs";
-  var left = " " + thumbName + "left";
-  var right = " " + thumbName + "right";
+  var left = " " + thumbName + "Left";
+  var right = " " + thumbName + "Right";
   var add = "";
 
   if (imgCount == 1) {

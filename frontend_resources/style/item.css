@@ -34,7 +34,15 @@
 
 .item .itemText {
   display: block;
-  padding: 6px 0 6px 0;
+  padding: 2px 0 2px 0;
+}
+
+.item .itemTextTop {
+  padding-top: 0 !important;
+}
+
+.item .itemTextBottom {
+  padding-bottom: 0 !important;
 }
 
 
