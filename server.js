@@ -13,7 +13,6 @@ var browserify  = require('browserify-middleware');
 
 var server    = http.Server(app);
 var bpath     = './backend_resources/';
-var fpath     = '/frontend_resources/';
 var conn      = JSON.parse(fs.readFileSync(bpath + 'connection_settings.json'));
 
 
@@ -24,37 +23,42 @@ app.get('/', function(req, res) {
   log('Processed ' + req.url);
 });
 
-app.get('/js/bundle.js', browserify(__dirname + fpath +  'js/main.jsx'));
-
-app.get('/js/*', function(req, res) {
-  res.sendFile(__dirname + fpath +  req.url);
+app.get('/*', function(req, res){
+  res.sendFile(__dirname + req.url);
   log('Processed ' + req.url);
 })
 
-app.get('/style/*.css', function(req, res) {
-  res.sendFile(__dirname + fpath + req.url);
-  log('Processed ' + req.url);
-});
+// app.get('/js/bundle.js', browserify(__dirname + fpath +  'js/main.jsx'));
 
-app.get('/cont/pages.json', function(req, res) {;
-  res.sendFile(__dirname + fpath + req.url);
-  log('Processed ' + req.url);
-});
+// app.get('/js/*', function(req, res) {
+//   res.sendFile(__dirname + fpath +  req.url);
+//   log('Processed ' + req.url);
+// })
 
-app.get('/cont/*/itemCollection.json', function(req, res) {
-  res.sendFile(__dirname + fpath + req.url);
-  log('Processed ' + req.url);
-});
+// app.get('/style/*.css', function(req, res) {
+//   res.sendFile(__dirname + fpath + req.url);
+//   log('Processed ' + req.url);
+// });
 
-app.get('/cont/*/*', function(req, res) {;
-  res.sendFile(__dirname + fpath + req.url);
-  log('Processed ' + req.url);
-});
+// app.get('/cont/pages.json', function(req, res) {;
+//   res.sendFile(__dirname + fpath + req.url);
+//   log('Processed ' + req.url);
+// });
 
-app.get('/imgs/*/*', function(req, res) {
-  res.sendFile(__dirname + fpath + req.url);
-  log('Processed ' + req.url);
-});
+// app.get('/cont/*/itemCollection.json', function(req, res) {
+//   res.sendFile(__dirname + fpath + req.url);
+//   log('Processed ' + req.url);
+// });
+
+// app.get('/cont/*/*', function(req, res) {;
+//   res.sendFile(__dirname + fpath + req.url);
+//   log('Processed ' + req.url);
+// });
+
+// app.get('/imgs/*/*', function(req, res) {
+//   res.sendFile(__dirname + fpath + req.url);
+//   log('Processed ' + req.url);
+// });
 
 
 

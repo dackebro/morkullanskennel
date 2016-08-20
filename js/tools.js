@@ -1,7 +1,5 @@
-const contpath = '/cont';
-
 function getJSON(path) {
-  var res = getSync(contpath + path);
+  var res = getSync(path);
   return JSON.parse(res);
 }
 
@@ -19,23 +17,15 @@ function getSync(path) {
 }
 
 function getSiteCont(path) {
-  var purePath = path.substring(1);
-  var siteCollection = getJSON(path + '/' + 'itemCollection.json');
-  var itemsURL = siteCollection[purePath];
+  path = (path == '/' ? '/main/' : path);
+  var siteCollection = getJSON(path + 'itemCollection.json');
 
-  if (itemsURL == undefined) {
+  if (siteCollection == undefined) {
     //TODO: return could not find requested url page
     console.log('Could not find requested url');
   }
 
-  var items = itemsURL.map(item => getJSON(path + '/' + item));
+  var items = siteCollection.items.map(item => getJSON(path + item));
 
   return items;
 }
-
-module.exports = {
-  getSiteCont,
-  getJSON
-}
-
-

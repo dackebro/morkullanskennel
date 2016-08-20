@@ -1,8 +1,0 @@
-{
-  "pages": [
-    {"displayName": "Home",       "href": "/"},
-    {"displayName": "How to",     "href": "/howto"},
-    {"displayName": "About",      "href": "/about"},
-    {"displayName": "Contact us", "href": "/contact"}
-  ]
-}
