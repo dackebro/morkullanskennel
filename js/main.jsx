@@ -30,26 +30,30 @@ class Item extends React.Component {
     var props = this.props;
     return (
       <div id={props.cont.itemId} className="item" key={props.cont.itemId}>
-        <h1>{props.cont.itemTitle}</h1>
-        <hr></hr>
-        {props.cont.itemText.map((elem, index) => (
-          <span className={"itemText" +
-                  (index == 0 ?
-                    " itemTextTop"
-                  : (index == props.cont.itemText.length - 1 ?
-                    " itemTextBottom"
-                  : ""))
-                }
-                dangerouslySetInnerHTML={{__html: elem}}
-                key={index} />
-        ))}
-        {props.cont.itemImgs.map((imgCont, index) => (
-          <div key={index}>
-            <hr></hr>
-            <ImgItem  imgCont={imgCont}
-                      path={props.path}/>
-          </div>
-        ))}
+        {props.cont.itemTitle == undefined ? '' : <h1>{props.cont.itemTitle}</h1>}
+        {props.cont.itemTitle == undefined ? '' : <hr></hr>}
+        {props.cont.itemText == undefined ? '' :
+          props.cont.itemText.map((elem, index) => (
+            <span className={"itemText" +
+                    (index == 0 ?
+                      " itemTextTop"
+                    : (index == props.cont.itemText.length - 1 ?
+                      " itemTextBottom"
+                    : ""))
+                  }
+                  dangerouslySetInnerHTML={{__html: elem}}
+                  key={index} />
+          ))
+        }
+        {props.cont.itemImgs == undefined ? '' :
+          props.cont.itemImgs.map((imgCont, index) => (
+            <div key={index}>
+              {index == 0 && props.cont.itemText == undefined ? '' : <hr></hr>}
+              <ImgItem  imgCont={imgCont}
+                        path={props.path}/>
+            </div>
+          ))
+        }
       </div>
     )
   }
@@ -94,13 +98,13 @@ class ImgItem extends React.Component {
           ) : (
             <div className={this.imgThumbClasses(imgCount, index)} key={index}>
               <div className="imgCenterOuter">
-                <a href={'/imgs' + path + img + '.png'}>
-                  <img src={'/imgs' + path + img + 'Thumb.png'}
+                <a href={'/imgs' + path + img}>
+                  <img src={'/imgs' + path + img.substring(0, img.lastIndexOf('.')) + 'Thumb' + img.substring(img.lastIndexOf('.'), img.length)}
                       className={"imgThumb " + "thumb" + imgCount + "imgsRescale"}
                   />
                 </a>
               </div>
-              <div className="thumbDesc">{desc}</div>
+              {desc == undefined ? '' : <div className="thumbDesc">{desc}</div>}
             </div>
           )
         ))}
