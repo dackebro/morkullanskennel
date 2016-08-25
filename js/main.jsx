@@ -4,7 +4,7 @@ class Main extends React.Component {
   }
 
   render() {
-    var path = window.location.pathname; //TODO: should be a parameter somehow
+    var path = window.location.pathname;
     var siteCont = getSiteCont(path); //an array of all items under current url
 
     return (
@@ -86,10 +86,12 @@ class ImgItem extends React.Component {
     var props = this.props;
     var imgCount = props.imgCont.imgCount;
     var imgs = props.imgCont.imgs;
+    var title = props.imgCont.imgTitle;
     var path = (props.path == '/' ? '/main/' : props.path);
 
     return (
       <div className="imgItemContainer">
+        {title == undefined ? '' : <div className="imgTitle">{title}</div>}
         {imgs.map(({img,desc}, index) => (
           img === "NO_IMAGE" ? (
             <div className={this.imgThumbClasses(imgCount, index)} key={index}>
@@ -104,7 +106,7 @@ class ImgItem extends React.Component {
                   />
                 </a>
               </div>
-              {desc == undefined ? '' : <div className="thumbDesc">{desc}</div>}
+              {desc == undefined ? '' : <div className={"thumbDesc thumbDesc" + imgCount + "imgs"}>{desc}</div>}
             </div>
           )
         ))}
