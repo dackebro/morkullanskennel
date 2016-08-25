@@ -16,6 +16,18 @@
   padding: 5px 5px 0 5px;
 }
 
+.imgTitle {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: inherit;
+  font-weight: 450;
+  line-height: 1.05;
+  color: #1f1f1f;
+  text-align: center;
+}
+
 .imgCenterInner {
   padding-left: auto;
   padding-right: auto;
@@ -30,7 +42,7 @@
 
 
 .thumb1imgs {
-
+  vertical-align: top;
 }
 
 .thumb1imgsRescale {
@@ -46,6 +58,7 @@
 
 .thumb2imgs {
   display: inline-block;
+  vertical-align: top;
   margin-right: 5px;
   margin-left: 5px;
   width: 410px;
@@ -73,6 +86,7 @@
 
 .thumb3imgs {
   display: inline-block;
+  vertical-align: top;
   margin-right: 5px;
   margin-left: 5px;
   width: 270px;
@@ -95,11 +109,20 @@
   max-height: 203px;
 }
 
+.thumbDesc3imgs {
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 5px 0 5px;
+}
+
 
 
 
 .thumb5imgs {
   display: inline-block;
+  vertical-align: top;
   margin-right: 5px;
   margin-left: 5px;
   width: 158px;
@@ -120,6 +143,14 @@
   height: 119px;
   max-width: 158px;
   max-height: 119px;
+}
+
+.thumbDesc5imgs {
+  text-align: center;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 5px 0 5px;
 }
 
 /*  5: 50 spacing;

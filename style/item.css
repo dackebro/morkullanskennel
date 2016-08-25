@@ -12,19 +12,6 @@
   padding: 10px;
 }
 
-.item h1 {
-  display: block;
-  font-size: 36px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: #1f1f1f;
-  text-align: left;
-  padding-top: 6px;
-}
-
 .item hr {
   display: block;
   margin: 5px auto 5px auto;
